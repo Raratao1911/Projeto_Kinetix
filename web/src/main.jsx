@@ -56,10 +56,9 @@ function App() {
           <Route
             path="/dashboard"
             element={
-              <PrivateRoute>
+            
                 <DashboardPage />
-              </PrivateRoute>
-
+     
             }
           />
 

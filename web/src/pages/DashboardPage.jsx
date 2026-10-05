@@ -9,9 +9,12 @@ export default function DashboardPage() {
     <main className="min-h-screen bg-slate-50 text-ink dark:bg-darkTheme-bg dark:text-darkTheme-text">
       <header className="border-b border-slate-200 bg-white dark:border-darkTheme-border dark:bg-darkTheme-panel">
         <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-5">
-          <div>
-            <strong className="block text-lg text-ink dark:text-darkTheme-text">KINETIX</strong>
-            <span className="text-sm text-slate-500 dark:text-darkTheme-muted">{session?.role}</span>
+          <div className="flex items-center gap-3">
+            <img className="h-10 w-10 rounded-full object-cover" src="/kinetix-logo.png" alt="Logo KINETIX" />
+            <div>
+              <strong className="block text-lg text-ink dark:text-darkTheme-text">KINETIX</strong>
+              <span className="text-sm text-slate-500 dark:text-darkTheme-muted">{session?.role}</span>
+            </div>
           </div>
           <button className="inline-flex h-10 items-center gap-2 rounded border border-slate-300 px-3 text-sm font-medium dark:border-darkTheme-border dark:text-darkTheme-text" onClick={logout}>
             <LogOut size={17} />
@@ -26,12 +29,12 @@ export default function DashboardPage() {
 
         <div className="mt-6 grid gap-4 md:grid-cols-3">
           <article className="rounded border border-slate-200 bg-white p-5 dark:border-darkTheme-border dark:bg-darkTheme-panel">
-            <Users className="text-sky" size={24} />
+            <Users className="text-mint dark:text-mint" size={24} />
             <h2 className="mt-4 text-lg font-semibold">Pacientes ativos</h2>
             <p className="mt-1 text-3xl font-semibold">0</p>
           </article>
           <article className="rounded border border-slate-200 bg-white p-5 dark:border-darkTheme-border dark:bg-darkTheme-panel">
-            <ShieldAlert className="text-coral" size={24} />
+            <ShieldAlert className="text-mint dark:text-mint" size={24} />
             <h2 className="mt-4 text-lg font-semibold">Alertas criticos</h2>
             <p className="mt-1 text-3xl font-semibold">0</p>
           </article>

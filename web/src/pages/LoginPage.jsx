@@ -30,7 +30,7 @@ export default function LoginPage() {
 
   return (
     <AuthShell
-      title="Acesse sua area de reabilitacao"
+      title="Acesse sua área de reabilitação"
       subtitle="Clinicas e fisioterapeutas acompanham pacientes, pacientes podem visualizar suas consultas e seus agendamentos por aqui."
     >
       <form onSubmit={handleSubmit} className="space-y-5">

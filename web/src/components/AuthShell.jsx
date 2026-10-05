@@ -1,5 +1,5 @@
 import React from 'react';
-import { Activity, ShieldCheck } from "lucide-react";
+import { ShieldCheck } from "lucide-react";
 
 export default function AuthShell({ title, subtitle, children }) {
   return (
@@ -7,9 +7,7 @@ export default function AuthShell({ title, subtitle, children }) {
       <div className="mx-auto grid min-h-screen max-w-6xl grid-cols-1 lg:grid-cols-[0.9fr_1.1fr]">
         <section className="flex flex-col justify-between bg-ink px-8 py-8 text-white dark:bg-darkTheme-surface lg:px-10">
           <div className="flex items-center gap-3">
-            <div className="grid h-10 w-10 place-items-center rounded bg-mint text-ink">
-              <Activity size={24} />
-            </div>
+            <img className="h-10 w-10 rounded-full object-cover" src="/kinetix-logo.png" alt="Logo KINETIX" />
             <div>
               <strong className="block text-lg">KINETIX</strong>
               <span className="text-sm text-white/70">Movimento inteligente</span>
