@@ -2,7 +2,7 @@ import axios from "axios";
 import Constants from "expo-constants";
 
 export const api = axios.create({
-  baseURL: Constants.expoConfig?.extra?.apiUrl ?? "http://localhost:8080"
+  baseURL: process.env.EXPO_PUBLIC_API_URL ?? Constants.expoConfig?.extra?.apiUrl ?? "http://10.0.2.2:8080"
 });
 
 export function setAuthToken(token) {

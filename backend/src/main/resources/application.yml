@@ -7,6 +7,8 @@ spring:
   datasource:
     url: ${SPRING_DATASOURCE_URL:jdbc:sqlserver://localhost:1433;databaseName=kinetix;encrypt=true;trustServerCertificate=true}
     username: ${SPRING_DATASOURCE_USERNAME:sa}
+    # Execucao direta no Windows usa a instancia SQL Server local.
+    # No Docker, SPRING_DATASOURCE_PASSWORD e sobrescrita pelo docker-compose.
     password: ${SPRING_DATASOURCE_PASSWORD:@ITB123456}
   jpa:
     hibernate:

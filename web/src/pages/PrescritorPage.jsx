@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Save, Plus, Trash2 } from "lucide-react";
-import api from "../services/api"; // Assumindo instancia axios configurada
+import { api } from "../api/client";
 
 const fieldClass = "w-full rounded border border-slate-300 bg-white p-2 outline-none focus:border-sky dark:border-darkTheme-border dark:bg-darkTheme-surface dark:text-darkTheme-text";
 
@@ -13,8 +13,8 @@ export default function PrescritorPage() {
 
   useEffect(() => {
     // Carregar dados iniciais (Simplificado para o exemplo)
-    api.get("/pacientes").then(res => setPacientes(res.data));
-    api.get("/exercicios").then(res => setExerciciosBase(res.data));
+    api.get("/api/pacientes").then(res => setPacientes(res.data));
+    api.get("/api/exercicios").then(res => setExerciciosBase(res.data));
   }, []);
 
   const addExercicio = () => {

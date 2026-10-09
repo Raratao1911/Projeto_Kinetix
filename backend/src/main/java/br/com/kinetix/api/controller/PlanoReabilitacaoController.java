@@ -1,7 +1,7 @@
-package com.kinetix.controller;
+package br.com.kinetix.api.controller;
 
-import com.kinetix.dto.PlanoReabilitacaoRequestDTO;
-import com.kinetix.service.PlanoReabilitacaoService;
+import br.com.kinetix.api.dto.PlanoReabilitacaoRequestDTO;
+import br.com.kinetix.api.service.PlanoReabilitacaoService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;

@@ -49,5 +49,21 @@ services:
     ports:
       - "8080:8080"
 
+  web:
+    image: node:22-alpine
+    container_name: kinetix-web
+    working_dir: /app
+    depends_on:
+      - backend
+    environment:
+      VITE_PROXY_TARGET: "http://backend:8080"
+    volumes:
+      - ./web:/app
+      - web-node-modules:/app/node_modules
+    command: sh -c "npm install && npm run dev -- --host 0.0.0.0"
+    ports:
+      - "5173:5173"
+
 volumes:
   sqlserver-data:
+  web-node-modules:

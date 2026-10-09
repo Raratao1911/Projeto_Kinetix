@@ -1,4 +1,4 @@
-package com.kinetix.dto;
+package br.com.kinetix.api.dto;
 
 import lombok.Builder;
 import lombok.Data;

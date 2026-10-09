@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { FlatList, Text, View, ActivityIndicator, StyleSheet } from "react-native";
 import { styles } from "../src/styles";
 import { useAuth } from "../src/state/AuthContext";
-import api from "../src/api/client";
+import { api } from "../src/api/client";
 
 export default function MinhaReabilitacao() {
   const { user } = useAuth();
