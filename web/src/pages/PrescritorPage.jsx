@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Save, Plus, Trash2 } from "lucide-react";
 import { api } from "../api/client";
+import Brand from "../components/Brand.jsx";
 
 const fieldClass = "w-full rounded border border-slate-300 bg-white p-2 outline-none focus:border-sky dark:border-darkTheme-border dark:bg-darkTheme-surface dark:text-darkTheme-text";
 
@@ -50,9 +51,15 @@ export default function PrescritorPage() {
   }
 
   return (
-    <div className="min-h-screen bg-slate-50 p-8 text-ink dark:bg-darkTheme-bg dark:text-darkTheme-text">
-      <div className="mx-auto max-w-5xl">
-      <header className="mb-8 flex justify-between items-center">
+    <div className="min-h-screen bg-slate-50 text-ink dark:bg-darkTheme-bg dark:text-darkTheme-text">
+      <header className="border-b border-slate-200 bg-sky text-white dark:border-darkTheme-border dark:bg-darkTheme-panel">
+        <div className="mx-auto flex min-h-36 max-w-6xl items-center px-5 py-2">
+          <Brand inverse />
+        </div>
+      </header>
+
+      <div className="mx-auto max-w-5xl px-5 py-8">
+      <header className="mb-8 flex flex-wrap items-center justify-between gap-4">
         <div>
           <h1 className="text-3xl font-bold text-ink dark:text-darkTheme-text">Prescritor Digital</h1>
           <p className="text-slate-500 dark:text-darkTheme-muted">Monte o plano de reabilitacao personalizado.</p>

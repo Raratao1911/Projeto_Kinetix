@@ -7,6 +7,8 @@ import { AuthProvider, useAuth } from "./state/AuthContext.jsx";
 import LoginPage from "./pages/LoginPage.jsx";
 import RegisterPage from "./pages/RegisterPage.jsx";
 import DashboardPage from "./pages/DashboardPage.jsx";
+import HomePage from "./pages/HomePage.jsx";
+import PrescritorPage from "./pages/PrescritorPage.jsx";
 
 function PrivateRoute({ children }) {
   const { session } = useAuth();
@@ -51,8 +53,10 @@ function App() {
       <BrowserRouter>
         <ThemeToggle />
         <Routes>
+          <Route path="/" element={<HomePage />} />
           <Route path="/login" element={<LoginPage />} />
           <Route path="/cadastro" element={<RegisterPage />} />
+          <Route path="/prescritor" element={<PrescritorPage />} />
           <Route
             path="/dashboard"
             element={
@@ -63,7 +67,7 @@ function App() {
           />
 
           
-          <Route path="*" element={<Navigate to="/dashboard" replace />} />
+          <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
 
         

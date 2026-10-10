@@ -1,18 +1,13 @@
 import React from 'react';
 import { ShieldCheck } from "lucide-react";
+import Brand from "./Brand.jsx";
 
 export default function AuthShell({ title, subtitle, children }) {
   return (
     <main className="min-h-screen bg-slate-50 text-ink dark:bg-darkTheme-bg dark:text-darkTheme-text">
       <div className="mx-auto grid min-h-screen max-w-6xl grid-cols-1 lg:grid-cols-[0.9fr_1.1fr]">
         <section className="flex flex-col justify-between bg-ink px-8 py-8 text-white dark:bg-darkTheme-surface lg:px-10">
-          <div className="flex items-center gap-3">
-            <img className="h-10 w-10 rounded-full object-cover" src="/kinetix-logo.png" alt="Logo KINETIX" />
-            <div>
-              <strong className="block text-lg">KINETIX</strong>
-              <span className="text-sm text-white/70">Movimento inteligente</span>
-            </div>
-          </div>
+          <Brand inverse lightBackground="bg-ink" />
 
           <div className="my-16 max-w-md">
             <h1 className="text-4xl font-semibold leading-tight">{title}</h1>
